@@ -1,0 +1,684 @@
+body {
+  background-color: #24252A;
+  padding: 0;
+  margin: 0;
+}
+.background{
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  background: #000000;
+  box-sizing: border-box;
+}
+.contener{
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.contener .ring{
+  position: relative;
+  width: 150px;
+  height: 150px;
+  margin: -30px;
+  border-radius: 50%;
+  border: 4px solid transparent;
+  border-top: 4px solid #24ecff;
+  animation: animate 4s linear infinite;
+}
+.contener .ring:nth-child(3){
+  position: absolute;
+  top: -66.66px;
+}
+@keyframes animate{
+  0%
+  {
+    transform: rotate(0deg);
+  }
+  100%
+  {
+    transform: rotate(360deg);
+  }
+}
+.contener .ring::before{
+  content: '';
+  position: absolute;
+  right: 12px;
+  top: 12px;
+  border-radius: 50%;
+  width: 15px;
+  height: 15px;
+  background: #24ecff;
+  box-shadow: 0 0 0 5px #24ecff33, 0 0 0 10px #24ecff22, 0 0 0 20px #24ecff11, 0 0 20px #24ecff, 0 0 50px #24ecff;
+}
+.contener .ring:nth-child(2){
+  animation: animate2 4s linear infinite;
+  animation-delay: -1s;
+  border-top: 4px solid transparent;
+  border-left: 4px solid #93ff2d;
+}
+@keyframes animate2{
+  0%
+  {
+    transform: rotate(360deg);
+  }
+  100%
+  {
+    transform: rotate(0deg);
+  }
+}
+.contener .ring:nth-child(2)::before{
+  content: '';
+  position: absolute;
+  top: initial;
+  left: 12px;
+  bottom: 12px;
+  border-radius: 50%;
+  width: 15px;
+  height: 15px;
+  background: #93ff2d;
+  box-shadow: 0 0 0 5px #93ff2d33, 0 0 0 10px #93ff2d22, 0 0 0 20px #93ff2d11, 0 0 20px #93ff2d, 0 0 50px #93ff2d;
+}
+.contener .ring:nth-child(3){
+  animation: animate2 4s linear infinite;
+  animation-delay: -3s;
+  position: absolute;
+  top: -66.66px;
+  border-top: 4px solid transparent;
+  border-left: 4px solid #e41cf8;
+}
+.contener .ring:nth-child(3)::before{
+  content: '';
+  position: absolute;
+  top: initial;
+  left: 12px;
+  bottom: 12px;
+  border-radius: 50%;
+  width: 15px;
+  height: 15px;
+  background: #e41cf8;
+  box-shadow: 0 0 0 5px #e41cf833, 0 0 0 10px #e41cf822, 0 0 0 20px #e41cf811, 0 0 20px #e41cf8, 0 0 50px #e41cf8;
+}
+.Loading{
+  width: 100%;
+  height: 100vh;
+  background: #000000;
+  padding: 225px;
+  box-sizing: border-box;
+}
+.loader{
+  position: relative;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background: linear-gradient(45deg, transparent, transparent, 70%, #03bcf4);
+  margin: auto;
+  animation: animate 0.9s linear infinite;
+}
+@keyframes animate{
+  0%
+  {
+    transform: rotate(0deg);
+    filter: hue-rotate(0deg);
+  }
+  100%
+  {
+    transform: rotate(360deg);
+    filter: hue-rotate(360deg);
+  }
+}
+.loader::before{
+  content: '';
+  position: absolute;
+  top: 6px;
+  left: 6px;
+  right: 6px;
+  bottom: 6px;
+  background: #000;
+  border-radius: 50%;
+  z-index: 1000;
+}
+.loader::after{
+  content: '';
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  background: #000;
+  background: linear-gradient(45deg, transparent, transparent, 70%, #03bcf4);
+  border-radius: 50%;
+  z-index: 1000;
+  z-index: 1;
+  filter: blur(30px);
+}
+p{
+  margin-right: 20px;
+}
+.contanar{
+  font-family: "Montserrat", sans-serif;
+  width: 100%;
+  height: 100vh;
+  background-image: url(https://uhdwallpapers.org/uploads/cache/4133895860/samsung-galaxy-s10-4k-image_600x338-mm-90.jpg);
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.card{
+  width: 90%;
+  max-width: 440px;
+  color: #fff;
+  text-align: center;
+  padding: 50px 35px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgb(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+}
+.card img{
+  width: 140px;
+  border-radius: 50%;
+}
+.card h2{
+  font-size: 40px;
+  font-weight: 600;
+  margin-top: 20px;
+}
+.card p{
+  font-size: 18px;
+  margin: 10px auto;
+  max-width: 330px;
+}
+.card .links img{
+  width: 40px;
+  border-radius: 50%;
+  margin: 10px 5px;
+  transition: background 0.5s;
+  border-radius: 30px;
+  margin: 30px 0 10px;
+}
+.BDN{
+  text-decoration: none;
+  display: inline-block;
+  font-weight: 500;
+  background: #fff;
+  color: #0178ff;
+  padding: 10px 30px;
+}
+.card .links img:hover{
+  background: #0178ff;
+}
+.logo {
+  font-family: "Dancing Script", cursive;
+  text-align: center;
+  color: rgb(16, 113, 224);
+  margin: 40px;
+  font-size: 200px;
+}
+.CTR{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.search-bar{
+  width: 100%;
+  max-width: 700px;
+  background: rgba(255, 255, 255, 0.2);
+  display: flex;
+  align-items: center;
+  border-radius: 60px;
+  padding: 10px 20px;
+  backdrop-filter: blur(4px) saturate(180%);
+}
+.search-bar input{
+  background: transparent;
+  flex: 1;
+  border: 0;
+  outline: none;
+  padding: 24px 20px;
+  font-size: 20px;
+  color: #cac7ff;
+}
+::placeholder{
+  color: #cac7ff;
+}
+.search-bar button img{
+  width: 25px;
+}
+.search-bar button{
+  border: 0;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  background: #58629b;
+  cursor: pointer;
+}
+.jjj{
+  font-family: "Montserrat", sans-serif;
+  color: white;
+  text-align: center;
+}
+.container{
+  margin: 0px auto;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  font-family: 'Scada', sans-serif;
+  max-width: 700px;
+  width: 100%;
+  padding: 25px 30px;
+  background: #fff;
+  border-radius: 5px;
+}
+.container .tittle{
+  font-size: 25px;
+  font-weight: 500;
+  position: relative;
+}
+.container .tittle:before{
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 3px;
+  width: 30px;
+  background: linear-gradient(135deg, #71b7e6, #9b59b6);
+}
+.container form .user-details{
+  margin: 20px 0 12px 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+form .user-details .input-box{
+  margin-bottom: 50px;
+  width: calc(100% / 2 - 20px);
+}
+.user-details .input-box input{
+  transition: all 0.3s ease;
+  border-bottom-width: 2px;
+  height: 45px;
+  width: 100%;
+  outline: none;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  padding-left: 15px;
+  font-size: 16px;
+}
+.user-details .input-box .details{
+  display: block;
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+.user-details .input-box input:focus
+.user-details .input-box input:valid{
+  border-color: #71b7e6;
+}
+form .gender-details .gender-tittle{
+  font-size: 20px;
+  font-weight: 500;
+}
+form .gender-details .catagory{
+  display: flex;
+  width: 80%;
+  margin: 40px 0;
+  justify-content: space-between;
+}
+.gender-details .catagory label{
+  display: flex;
+  align-items: center;
+}
+.gender-details .catagory .dot{
+  height: 18px;
+  width: 18px;
+  background: #d9d9d9;
+  border-radius: 50%;
+  margin-right: 10px;
+  border: 5px solid transparent;
+  transition: all 0.3s ease;
+}
+ #dot-1:checked ~ .catagory .one,
+ #dot-2:checked ~ .catagory .two,
+ #dot-3:checked ~ .catagory .three{
+   border-color: #d9d9d9;
+   background: #71b7e6;
+ }
+ form input[type="radio"]{
+   display: none;
+ }
+ form .button{
+   height: 45px;
+   margin: 45px 0;
+ }
+ form .button input{
+   height: 100%;
+   width: 100%;
+   outline: none;
+   color: #fff;
+   border: none;
+   font-size: 18px;
+   font-weight: 500;
+   letter-spacing: 1px;
+   border-radius: 5px;
+   background: linear-gradient(135deg, #71b7e6, #9b59b6);
+ }
+ form .button input:hover{
+  background: linear-gradient(135deg, #71b7e6, #9b59b6);
+ }
+@media (max-width: 584px){
+  .container{
+    max-width: 100%;
+  }
+}
+.list{
+  font-family: 'Scada', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  color: #edf0f1;
+  text-decoration: none;
+}
+.Ancore{
+  font-family: 'Scada', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  color: #edf0f1;
+  text-decoration: none;
+}
+.Click{
+  font-family: 'Scada', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  color: #edf0f1;
+  text-decoration: none;
+  padding: 9px 25px;
+  background-color: rgb(0, 139, 169, 1);
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+}
+.Click:hover{
+  background-color: rgb(0, 139, 169, 0.8);
+}
+header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 10%;
+  background-color: #1f222c;
+}
+.logo1{
+  height: 50px;
+  cursor: pointer;
+}
+.nav-links{
+  list-style: none;
+}
+.nav-links li{
+  display: inline-block;
+  padding: 0px 20px;
+}
+.nav-links li a{
+  transition: all 0.3s ease 0s;
+}
+.nav-links li a:hover{
+  color:#0088a9
+}
+.importanece {
+  text-align: center;
+  margin-left: 40px;
+  color: white;
+}
+.align {
+  text-align: center;
+}
+.v {
+  font-family: "Montserrat", sans-serif;
+  text-align: center;
+  color: white;
+}
+.website {
+  text-align: center;
+}
+.location {
+  text-align: center;
+}
+.R {
+  font-family: "Montserrat", sans-serif;
+  text-align: center;
+  color: white;
+}
+.Q {
+  font-family: "Montserrat", sans-serif;
+  text-align: center;
+  color: white;
+}
+.h {
+  font-family: "Montserrat", sans-serif;
+  color: yellowgreen;
+  margin-left: 40px;
+}
+.type {
+  font-family: "Montserrat", sans-serif;
+  color: rgb(224, 150, 13);
+  margin-left: 40px;
+}
+.c {
+  font-family: "Montserrat", sans-serif;
+  margin: 40px;
+  color: white;
+}
+.i {
+  font-family: "Montserrat", sans-serif;
+  margin: 40px;
+  color: white;
+}
+.b {
+  font-family: "Montserrat", sans-serif;
+  margin: 40px;
+  color: white;
+}
+.T {
+  font-family: "Montserrat", sans-serif;
+  margin: 40px;
+  color: white;
+}
+.Illustrator {
+  font-family: "Montserrat", sans-serif;
+  margin-left: 40px;
+  color: white;
+}
+.CorelDRAW {
+  font-family: "Montserrat", sans-serif;
+  margin-left: 40px;
+  color: white;
+}
+.O {
+  font-family: "Montserrat", sans-serif;
+  margin: 40px;
+  color: white;
+}
+.WH {
+  font-family: "Montserrat", sans-serif;
+  color: lightseagreen;
+  margin-left: 40px;
+}
+.d {
+  margin-left: 40px;
+  color: white;
+}
+ol {
+  margin: 20px;
+  color: white;
+}
+ul {
+  margin: 20px;
+  color: white;
+}
+.app {
+  margin-left: 40px;
+  color: white;
+}
+.Created-by {
+  font-family: "Montserrat", sans-serif;
+  text-align: center;
+  color: white;
+}
+.Name {
+  font-family: "Dancing Script", cursive;
+  color: rgb(7, 103, 133);
+  text-align: center;
+}
+.Thanks {
+  font-family: "Dancing Script", cursive;
+  color: darkgoldenrod;
+  text-align: center;
+}
+marquee {
+  color: rgb(0, 205, 205);
+  font-size: large;
+  margin: 40px;
+}
+.Video {
+  margin: 40px;
+}
+.img {
+  margin: 40px;
+}
+.L {
+  color: #0066cc;
+  font-size: 25px;
+  font-family: "Montserrat", sans-serif;
+}
+.btn {
+  position: absolute;
+}
+.Swith {
+  background: transparent;
+  color: #00c2ba;
+  width: 150px;
+  height: 30px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 20px;
+  border-color: #00c2ba;
+  font-weight: 600;
+  border-radius: 22px;
+  letter-spacing: 2px;
+  transition: 1s;
+  margin-left: 40px;
+}
+.Swith:hover {
+  cursor: pointer;
+  box-shadow: 0 2px 50px 0 #00c2ba, 0 28px 100px 0 #00c2ba;
+  transition: 2s;
+}
+.circle {
+  position: relative;
+  width: 60vh;
+  height: 60vh;
+  background: linear-gradient(#33ccff, #ff0066);
+  border-radius: 50%;
+  animation: animate 0.5s linear infinite;
+  margin-left: 450px;
+}
+.circle:after {
+  content: "";
+  position: absolute;
+  top: 35px;
+  right: 35px;
+  bottom: 35px;
+  left: 35px;
+  background-color: #24252A;
+  border-radius: 50%;
+}
+.circle span {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(#33ccff, #ff0066);
+  border-radius: 50%;
+}
+.circle span:nth-child(1) {
+  filter: blur(5px);
+}
+.circle span:nth-child(2) {
+  filter: blur(10px);
+}
+.circle span:nth-child(3) {
+  filter: blur(20px);
+}
+.circle span:nth-child(4) {
+  filter: blur(55px);
+}
+.Keybord{
+  background-image: url(https://wallpapercave.com/wp/wp2566206.jpg);
+  background-size: cover;
+  height: 800px;
+}
+.letter{
+  margin-left: 150px;
+  margin-top: 100px;
+  font-family: "Dancing Script", cursive;
+  color: #ffffff;
+  background: #000000;
+  background-size: 100%;
+  padding: 30px;
+  font-size: 200px;
+  font-weight: bold;
+  text-transform: capitalize;
+}
+.wropper-1{
+  height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: black;
+}
+.letter::before{
+  content: "L";
+  position: absolute;
+  mix-blend-mode: difference;
+  filter: blur(3px);
+}
+.dodge{
+  background: radial-gradient(circle, white, black 45%) center / 15% 15%;
+  position: absolute;
+  top: -100%;
+  left: -100%;
+  right: 0%;
+  bottom: 0%;
+  mix-blend-mode: color-dodge;
+}
+.wropper{
+  display: inline-flex;
+  width: 500px;
+  height: 500px;
+  background: black;
+  filter: brightness(200%);
+  overflow: hidden;
+  animation: light 3s linear infinite;
+}
+.gradiant{
+  background-image: linear-gradient(to right top, #0a2060, #12eb9f);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  mix-blend-mode: soft-light;
+}
+@keyframes animate{
+  from{
+    transform: rotate(0deg);
+  }
+  to{
+    transform: rotate(360deg);
+  }
+}
